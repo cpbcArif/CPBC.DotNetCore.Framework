@@ -9,8 +9,8 @@ namespace CPBC.DotNetCore.Common.Entities
     {
         public int Id { get; set; }
         public string Text { get; set; }
-        public int MasterItemId { get; set; }
-        public QuestionBank MasterItem { get; set; }
+        public int? MasterItemId { get; set; }
+        public virtual QuestionBank MasterItem { get; set; }
         public bool IsMaster { get; set; } = false;
         public bool IsActive { get; set; } = true;
     }

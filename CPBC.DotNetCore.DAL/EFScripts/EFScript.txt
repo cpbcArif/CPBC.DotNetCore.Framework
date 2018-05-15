@@ -1,0 +1,12 @@
+﻿
+
+=> GO to DAL project root folder using CMD
+
+> dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+-- Inslatt this tools for Migration
+> dotnet add package Microsoft.EntityFrameworkCore.Tools [didn't work for me]
+
+> Install-Package Microsoft.EntityFrameworkCore.Tools
+
+> Update-Database
