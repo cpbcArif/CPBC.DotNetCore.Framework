@@ -33,8 +33,6 @@ namespace CPBC.DotNetCore.DAL.Migrations
 
                     b.Property<bool>("IsMaster");
 
-                    b.Property<int>("MasterItemId");
-
                     b.Property<string>("Text");
 
                     b.Property<string>("UpdatedBy");
@@ -43,17 +41,7 @@ namespace CPBC.DotNetCore.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MasterItemId");
-
                     b.ToTable("QuestionBanks");
-                });
-
-            modelBuilder.Entity("CPBC.DotNetCore.Common.Entities.QuestionBank", b =>
-                {
-                    b.HasOne("CPBC.DotNetCore.Common.Entities.QuestionBank", "MasterItem")
-                        .WithMany()
-                        .HasForeignKey("MasterItemId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

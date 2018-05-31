@@ -19,7 +19,6 @@ namespace CPBC.DotNetCore.DAL.Migrations
                     CreatedOn = table.Column<DateTime>(nullable: false),
                     IsActive = table.Column<bool>(nullable: false),
                     IsMaster = table.Column<bool>(nullable: false),
-                    MasterItemId = table.Column<int>(nullable: false),
                     Text = table.Column<string>(nullable: true),
                     UpdatedBy = table.Column<string>(nullable: true),
                     UpdatedOn = table.Column<DateTime>(nullable: false)
@@ -27,18 +26,7 @@ namespace CPBC.DotNetCore.DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_QuestionBanks", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_QuestionBanks_QuestionBanks_MasterItemId",
-                        column: x => x.MasterItemId,
-                        principalTable: "QuestionBanks",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_QuestionBanks_MasterItemId",
-                table: "QuestionBanks",
-                column: "MasterItemId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

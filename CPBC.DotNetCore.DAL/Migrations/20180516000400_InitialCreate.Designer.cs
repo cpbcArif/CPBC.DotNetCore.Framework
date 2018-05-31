@@ -11,7 +11,7 @@ using System;
 namespace CPBC.DotNetCore.DAL.Migrations
 {
     [DbContext(typeof(CPBCDataContext))]
-    [Migration("20180515173431_InitialCreate")]
+    [Migration("20180516000400_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,8 +34,6 @@ namespace CPBC.DotNetCore.DAL.Migrations
 
                     b.Property<bool>("IsMaster");
 
-                    b.Property<int>("MasterItemId");
-
                     b.Property<string>("Text");
 
                     b.Property<string>("UpdatedBy");
@@ -44,17 +42,7 @@ namespace CPBC.DotNetCore.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MasterItemId");
-
                     b.ToTable("QuestionBanks");
-                });
-
-            modelBuilder.Entity("CPBC.DotNetCore.Common.Entities.QuestionBank", b =>
-                {
-                    b.HasOne("CPBC.DotNetCore.Common.Entities.QuestionBank", "MasterItem")
-                        .WithMany()
-                        .HasForeignKey("MasterItemId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
