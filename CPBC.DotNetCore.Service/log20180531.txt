@@ -1,8 +1,0 @@
-2018-05-31 13:06:19.169 -07:00 [INF] Starting web host!!
-2018-05-31 13:06:19.975 -07:00 [INF] User profile is available. Using 'C:\Users\amosharraf\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
-2018-05-31 13:06:23.391 -07:00 [INF] Request starting HTTP/1.1 GET http://localhost:59969/api/values  
-2018-05-31 13:06:23.736 -07:00 [INF] Executing action method CPBC.DotNetCore.Service.Controllers.ValuesController.Get (CPBC.DotNetCore.Service) with arguments (null) - ModelState is "Valid"
-2018-05-31 13:06:23.740 -07:00 [INF] Getting item
-2018-05-31 13:06:23.745 -07:00 [INF] Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext.
-2018-05-31 13:06:23.830 -07:00 [INF] Executed action CPBC.DotNetCore.Service.Controllers.ValuesController.Get (CPBC.DotNetCore.Service) in 109.35350000000001ms
-2018-05-31 13:06:23.836 -07:00 [INF] Request finished in 459.3414ms 200 application/json; charset=utf-8
